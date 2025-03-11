@@ -136,6 +136,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-home/victor/synthpop/synthpop_tests/outputfiles
-home/victor/synthpop/synthpop_tets/PlotPngs
+fitsconverter.py
 
