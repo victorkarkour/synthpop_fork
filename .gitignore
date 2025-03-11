@@ -138,6 +138,3 @@ dmypy.json
 
 fitsconverter.py
 synthpop_tests/outputfiles
-synthpop_tests/*.py
-synthpop_tests/.ipynb
-synthpop_tests/!RadVel.py
