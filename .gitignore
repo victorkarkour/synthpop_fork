@@ -138,3 +138,5 @@ dmypy.json
 
 fitsconverter.py
 synthpop_tests/outputfiles
+synthpop_tests/Test.ipynb
+synthpop_tests/example.py

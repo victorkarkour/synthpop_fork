@@ -10,8 +10,11 @@ class BRAVA_Rad_Vel:
     def __init__(self, startup = False, plot = False, binnum = 14 ,path = str):
         #self.path = glob.glob(path) # TRY TO MAKE AN "ALL" FUNCTION FOR EACH FUNCTION THAT ITERATES ON A FOLDER OF .CSV FILES
         self.path = path #
-        print("Reading .csv file....")
-        self.csv = pd.read_csv(self.path)
+        print("Reading a file....")
+        if self.path.endswith(".csv"):
+            self.csv = pd.read_csv(self.path)
+        else:
+            self.csv = pd.read_hdf(self.path)
         self.binnum = binnum # DONT FORGET ABOUT THIS!!!! <-------
         
         if startup:
