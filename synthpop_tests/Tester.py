@@ -34,8 +34,8 @@ import matplotlib as mpl
 # print("9")
 # RV9 = BRV(startup = True,path = "/home/victor/SURP/venv/lib/python3.10/site-packages/synthpop/outputfiles/default_synthpop/besancon_Robin2003_l10.000_b-4.000.csv")
 # print("10")
-RV1 = BRV(startup = True,path = "/home/victor/SURP/outputfiles/hst_bulge_treasury_sim/Oct2024_l-10.000_b-4.000.csv")
-RV2 = BRV(startup = True,path = "/home/victor/SURP/outputfiles/hst_bulge_treasury_sim/Oct2024_l10.000_b-4.000.csv")
+RV1 = BRV(startup = True, timer = True, path = "/home/victor/synthpop/synthpop_tests/outputfiles/March2025_ModelRobin2003/Victor_March2025_l0.000_b-6.000.h5")
+RV2 = BRV(startup = True, timer = True, path = "/home/victor/synthpop/synthpop_tests/outputfiles/hst_bulge_treasury_sim/Oct2024_l10.000_b-4.000.csv")
 
 
 RV_pd = pd.DataFrame()
@@ -128,7 +128,7 @@ RV_pd = pd.concat([RV_pd, RV2.pd_RVs],ignore_index = True)
 # """
 # Fix latitudes for plotting
 # """
-print(RV_pd)
+# print(RV_pd)
 
 # fig, (ax) = plt.subplots(sharex=True)
 # ax.scatter(l_axis,b_axis, c = RV_axis,cmap = cm.seismic)

@@ -4,11 +4,14 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import glob
 import matplotlib.cm as cm
+import time
 #import scipy.interpolate as interpolate
 
 class BRAVA_Rad_Vel:
-    def __init__(self, startup = False, plot = False, binnum = 14 ,path = str):
+    def __init__(self, startup = False, timer = False, plot = False, binnum = 14 ,path = str):
         #self.path = glob.glob(path) # TRY TO MAKE AN "ALL" FUNCTION FOR EACH FUNCTION THAT ITERATES ON A FOLDER OF .CSV FILES
+        if timer:
+            start = time.time()
         self.path = path #
         print("Reading a file....")
         if self.path.endswith(".csv"):
@@ -36,6 +39,9 @@ class BRAVA_Rad_Vel:
         if plot:
             print("Plotting Radial Velocities....")
             self.PlotRVs(self.pd_RVs)
+        if timer:
+            end = time.time()
+            print(f"{end - start:.2f} seconds elapsed")
             
     def read_file(self, Print = False):
         """
